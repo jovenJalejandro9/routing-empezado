@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.MuiBottomNavigation-root-128.menuNabBar {
+  background-color: #f50057;
+}
+
+.MuiBottomNavigationAction-iconOnly-131.whiteColor {
+  color: white;
+}
+
+.MuiAvatar-root-150.bigAvatar {
+  width: 60;
+  height: 60;
+}
+
+.MuiGrid-item-39 .colorPapel {
+  margin: 20px;
+}
