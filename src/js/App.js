@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
 import '../css/App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from './components/Home'
 import Users from './components/Users'
+import UserPerfil from './components/UserPerfil'
 import Sheets from './components/Sheets'
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
-import Typography from 'material-ui/Typography';
 import BottomNavigation, { BottomNavigationAction } from 'material-ui/BottomNavigation';
-import RestoreIcon from '@material-ui/icons/Restore';
 import SheetIcon from '@material-ui/icons/ContentPaste';
 import GroupIcon from '@material-ui/icons/Group';
 import HouseIcon from '@material-ui/icons/Home';
@@ -19,7 +17,14 @@ const users = [
   {
     id: 1,
     name: 'Javier',
-    surname: 'Cansado'
+    surname: 'Cansado',
+    tel1: 711727384,
+    tel2: 919234322, 
+    addres: 'C/Mirra 39, Tres Cantos, Madrid', 
+    email: 'javi_cansado@gmail.com',
+    currentWork: 'Profesor', 
+    prevWorks: ['Humorista', 'Carpintero'], 
+    prevVolunteering : ['Discapacidad', 'Limpieza']
   },
   {
     id: 2,
@@ -59,6 +64,7 @@ class App extends Component {
           
           <Route exact path="/" component={() => <Home jarl={false} />} />
           <Route exact path="/users" component={() => <Users data={users} />} />
+          <Route exact path="/userPerfil" component={() => <UserPerfil data={users} />} />
           <Route exact path="/sheets" component={() => <Sheets data={users} />} />
           
         </div>
