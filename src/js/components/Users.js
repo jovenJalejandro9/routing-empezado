@@ -25,23 +25,22 @@ class Users extends React.Component {
 		const users = this.props.data
 		const userNode = users.map((user) => {
 			return (
-				<div key={user.id} className='conainer'>
-					<Toolbar>
+				<div key={user.id} className='container'>
+					
 						<Grid container spacing={24}>
 							<Grid item xs={2} />
 							<Grid item xs={8} >
-								<Typography className='titleUser' variant='display1' gutterBottom>
+								<Typography className='topElelment' variant='display1' gutterBottom>
 									Javier Cansado
        					</Typography>
 
 							</Grid>
 							<Grid item xs={2} />
 						</Grid>
-					</Toolbar>
-					<Toolbar>
+					
 						<Grid container spacing={24}>
 							<Grid item xs={2} />
-							<Grid className='boxUserDetails' item xs={4}>
+							<Grid className='boxDetailsList' item xs={4}>
 								<List className='listUserDetails'>
 									<ListItem className='leftItem'>
 										<ListItemIcon>
@@ -70,7 +69,7 @@ class Users extends React.Component {
 									</ListItem>
 								</List>
 							</Grid>
-							<Grid className='boxUserDetails' item xs={4}>
+							<Grid className='boxDetailsList' item xs={4}>
 								<List className='listUserDetails'>
 									<ListItem className='leftItem'>
 										<ListItemIcon>
@@ -107,20 +106,17 @@ class Users extends React.Component {
 							</Grid>
 							<Grid item xs={2} />
 						</Grid>
-					</Toolbar>
-					<Toolbar>
 						<Grid container spacing={24}>
 							<Grid item xs={2} />
 							<Grid item xs={8} >
 								<Link to="/UserPerfil" className = 'linkStyle'>
-									<Button variant="raised" color="secondary" >
-										Ficha completa
+									<Button className = 'finalButton'variant="raised" color="secondary" >
+										Toda la información
       						</Button>
 								</Link>
 							</Grid>
 							<Grid item xs={2} />
 						</Grid>
-					</Toolbar>
 					<hr />
 				</div>
 

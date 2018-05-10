@@ -4,11 +4,11 @@ body {
   font-family: sans-serif;
 }
 
-.MuiBottomNavigation-root-128.menuNabBar {
+.container .menuNabBarContainer {
   background-color: #f50057;
 }
 
-.MuiBottomNavigationAction-iconOnly-131.whiteColor {
+.container .menuNabBarIcon {
   color: white;
 }
 
@@ -25,7 +25,7 @@ div .leftItem {
   padding-left: 0px;
 }
 
-.boxUserDetails .listUserDetails {
+.boxDetailsList .listUserDetails {
   padding: 0px
 }
 
@@ -34,7 +34,7 @@ div .iconInfo {
   color: #f50357;
 }
 
-.container .titleUser {
+.container .topElelment {
   margin-top: 20px;
 }
 
@@ -49,4 +49,8 @@ div .iconInfo {
 .userForm .containeRowUser {
   margin: 0px; 
   padding: 0px;
+}
+
+.container .finalButton {
+  margin: 20px 20px 20px 0px ;
 }

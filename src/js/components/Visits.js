@@ -19,10 +19,11 @@ import ImportantIcon from '@material-ui/icons/Error';
 import LocalityIcon from '@material-ui/icons/LocationCity';
 import ZoomIcon from '@material-ui/icons/ZoomIn';
 import MoneyIcon from '@material-ui/icons/AttachMoney';
-import GroupIcon from '@material-ui/icons/Group';
 import NoSponsorIcon from '@material-ui/icons/MoodBad';
 import TimeIcon from '@material-ui/icons/AvTimer';
 import { Link } from "react-router-dom";
+import GroupIcon from '@material-ui/icons/Group';
+
 import List, {
 	ListItem,
 	ListItemIcon,
@@ -94,24 +95,11 @@ class Sheets extends React.Component {
 						</Grid>
 						<Grid className='boxDetailsList' item xs={4}>
 							<List className='listUserDetails'>
-								<ListItem className='leftItem'>
-									<ListItemIcon>
-										<MedicalIcon />
-									</ListItemIcon>
-									<ListItemText className='leftItem'
-										primary="Sindrome de Down"
-										secondary='Anemia'
-									/>
-								</ListItem>
-								<ListItem className='leftItem'>
-									<ListItemIcon>
-										<SchoolIcon />
-									</ListItemIcon>
-									<ListItemText className='leftItem'
-										primary="AFAPED"
-										secondary='Terapia de Baile'
-									/>
-								</ListItem>
+
+							<Typography className='topElelment' variant='display4' gutterBottom>
+								97 %
+       					</Typography>
+
 								<p>
 									<Tooltip id="tooltip-icon" title="Tiene que operarse de la rodilla urgente">
 										<ImportantIcon className='iconInfo' />
@@ -134,7 +122,7 @@ class Sheets extends React.Component {
 					<Grid container spacing={24}>
 						<Grid item xs={2} />
 						<Grid item xs={8} >
-							<Link to="/sheet" className='linkStyle'>
+							<Link to="/UserPerfil" className='linkStyle'>
 								<Button className='finalButton' variant="raised" color="secondary" >
 									Ficha completa
       						</Button>
