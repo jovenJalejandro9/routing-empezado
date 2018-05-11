@@ -75,11 +75,6 @@ const Home = (props) => {
 							/>
 						</Grid>
 					</Grid>
-					<Link to="/Users" className='linkStyle '>
-						<Button className='finalButton' variant="raised" color="secondary" >
-							Aceptar
-      						</Button>
-					</Link>
 				</Grid>
 				<Grid item xs={2} />
 			</Grid>

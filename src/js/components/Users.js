@@ -130,14 +130,14 @@ class Users extends React.Component {
 			)
 		})
 		return <div>
-			 <AppBar  className = 'container' position='sticky' color='inherit'>
-			<Grid container spacing={24}>
-				<Grid item xs={2} />
-				<Grid item xs={8} >
-					<FilterUsers />
+			<AppBar className='container' position='sticky' color='inherit'>
+				<Grid container spacing={24}>
+					<Grid item xs={2} />
+					<Grid item xs={8} >
+						<FilterUsers />
+					</Grid>
+					<Grid item xs={2} />
 				</Grid>
-				<Grid item xs={2} />
-			</Grid>
 			</AppBar>
 
 			{userNode}

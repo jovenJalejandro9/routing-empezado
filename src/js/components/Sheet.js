@@ -660,6 +660,11 @@ class Sheet extends React.Component {
 									Guardar Cambios
       						</Button>
 							</Link>
+							<Link to="/Users" className='linkStyle '>
+								<Button className='finalButton' variant="raised" color="secondary" >
+									Eliminar Ficha
+      						</Button>
+							</Link>
 						</Grid>
 						<Grid item xs={2} />
 					</Grid>

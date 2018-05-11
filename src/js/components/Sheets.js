@@ -1,5 +1,7 @@
 import React from "react"
 import Grid from 'material-ui/Grid';
+import FilterSheets from './FilterSheets'
+import AppBar from 'material-ui/AppBar'
 import { Toolbar } from "material-ui";
 import Typography from 'material-ui/Typography';
 import Tooltip from 'material-ui/Tooltip';
@@ -22,6 +24,7 @@ import MoneyIcon from '@material-ui/icons/AttachMoney';
 import GroupIcon from '@material-ui/icons/Group';
 import NoSponsorIcon from '@material-ui/icons/MoodBad';
 import TimeIcon from '@material-ui/icons/AvTimer';
+import Accessible from '@material-ui/icons/Accessible';
 import { Link } from "react-router-dom";
 import List, {
 	ListItem,
@@ -35,6 +38,7 @@ class Sheets extends React.Component {
 		const userNode = users.map((user) => {
 			return (
 				<div key={user.id} className='container'>
+
 					<Grid container spacing={24}>
 						<Grid item xs={2} />
 						<Grid item xs={8} >
@@ -125,6 +129,9 @@ class Sheets extends React.Component {
 									<Tooltip id="tooltip-icon" title="No tiene padrino">
 										<NoSponsorIcon className='iconInfo' />
 									</Tooltip>
+									<Tooltip id="tooltip-icon" title="Usa silla de redas o andador">
+										<Accessible className='iconInfo' />
+									</Tooltip>
 								</p>
 							</List>
 						</Grid>
@@ -153,6 +160,16 @@ class Sheets extends React.Component {
 			)
 		})
 		return <div>
+			<AppBar className='container' position='sticky' color='inherit'>
+				<Grid container spacing={24}>
+					<Grid item xs={2} />
+					<Grid item xs={8} >
+						<FilterSheets />
+					</Grid>
+					<Grid item xs={2} />
+				</Grid>
+			</AppBar>
+
 			{userNode}
 		</div>
 	}

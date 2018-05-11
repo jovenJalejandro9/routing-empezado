@@ -15,10 +15,33 @@ import Button from 'material-ui/Button';
 import Divider from 'material-ui/Divider';
 import TextField from 'material-ui/TextField';
 import Grid from 'material-ui/Grid';
+import MenuItem from 'material-ui/MenuItem';
 import { Link } from "react-router-dom";
 
 const FilteUsers = (props) => {
   const { classes } = props;
+  const movility = [
+    {
+      value: 'mother',
+      label: 'Madre',
+    },
+    {
+      value: 'father',
+      label: 'Padre',
+    },
+    {
+      value: 'granparent',
+      label: 'Abuelo',
+    },
+    {
+      value: 'anotherRelative',
+      label: 'otro familar',
+    },
+    {
+      value: 'other',
+      label: 'Otro',
+    },
+  ];
   return (
     <div>
       <ExpansionPanel className='containerFilter' >
@@ -33,8 +56,8 @@ const FilteUsers = (props) => {
               <TextField
                 fullWidth
                 className='eleTextField'
-                id="filterUserProfession"
-                label="Profesión"
+                id="filterNameSheet"
+                label="Nombre"
               />
 
             </Grid>
@@ -42,16 +65,49 @@ const FilteUsers = (props) => {
               <TextField
                 fullWidth
                 className='eleTextField'
-                id="filterUserStudies"
-                label="Estudios"
+                id="filterCitySheet"
+                label="Localidad"
               />
-
             </Grid>
             <Grid item xs={6} >
-              <FormControlLabel control={<Switch value="siwichDriver" />} label="Conduce" />
+              <TextField
+                fullWidth
+                className='eleTextField'
+                id="filterMedicalSheet"
+                label="Diagnóstico"
+              />
             </Grid>
             <Grid item xs={6} >
-              <FormControlLabel control={<Switch value="swichFood" />} label="Manipula alimentos" />
+              <TextField
+                fullWidth
+                className='eleTextField'
+                id="filterSchoolSheet"
+                label="Escuela"
+              />
+            </Grid>
+            <Grid item xs={3} >
+									<TextField
+										select
+										fullWidth
+										className='eleTextField'
+										id="schoolYearUser"
+										label="Año de entrada"
+										defaultValue='2018'
+										value='Madre'
+									>
+										{movility.map(year => (
+											<MenuItem key={year} value={year}>
+												{year}
+											</MenuItem>
+										))}
+									</TextField>
+								</Grid>
+            
+            <Grid item xs={6} >
+              <FormControlLabel control={<Switch value="siwichFhysical" />} label="Terapia física" />
+            </Grid>
+            <Grid item xs={6} >
+              <FormControlLabel control={<Switch value="swichLanuage" />} label="Terapia de Lenguaje" />
             </Grid>
             <Grid item xs={6} >
               <FormControlLabel control={<Switch value="swichEnglish" />} label="Habla ingles" />
@@ -64,7 +120,7 @@ const FilteUsers = (props) => {
         <Divider />
         <ExpansionPanelActions>
           <Button size="small">Cancelar</Button>
-          <Link to="/users" className='linkStyle'>
+          <Link to="/sheets" className='linkStyle'>
             <Button className='finalButton' variant="raised" color="secondary" >
               Aplicar
       			</Button>
