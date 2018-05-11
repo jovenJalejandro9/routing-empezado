@@ -54,3 +54,19 @@ div .iconInfo {
 .container .finalButton {
   margin: 20px 20px 20px 0px ;
 }
+
+.conatinerMap .mapHome {
+  height: 0;
+  padding-top: 56%;
+}
+
+div .containerFilter {
+  box-shadow: none;
+}
+div .bodyFilter {
+  padding: 0px;
+}
+
+div .headerFilter {
+  padding: 0px;
+}

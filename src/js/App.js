@@ -38,6 +38,11 @@ const users = [
     id: 2,
     name: 'Pepin',
     surname: 'Tre'
+  },
+  {
+    id: 3,
+    name: 'Mariano',
+    surname: 'Rajoy'
   }
 ]
 class App extends Component {
