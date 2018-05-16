@@ -33,17 +33,17 @@ const styles = theme => ({
 });
 
 let id = 0;
-function createData(name, surname, birthday, relation, workStudy, coexistence, observations) {
+function createData(currentSchool, startYear, prevSchool, theraphyes, support, enviornment, observations, dateStamp) {
   id += 1;
-  return { id,name, surname, birthday, relation, workStudy, coexistence, observations};
+  return { id,currentSchool, startYear, prevSchool, theraphyes, support, enviornment, observations, dateStamp};
 }
 
 const data = [ 
-  createData('Jesus', 'Concha','21/2/1990', 'Padre', 'Trabaja', 'Si', 'Bebe mucho'),
-  createData('Maria', 'Concha','21/3/2004', 'Hermana', 'Estudia', 'Si', 'No ayuda en casa para nada y está embarazada')
+  createData('Katuwira', '2014','Angel Mary', 'Terapia física', 'Madre', 'Sale con los vecinos', 'Pega a los compañeros', '20/07/2018'),
+  createData('Angel Mary', '2012','Nunguno', 'Terapia física', 'Madre', 'Sale con los vecinos', 'Pega a los compañeros', '20/07/2012')
 ];
 
-function TableFamily(props) {
+function TableEducation(props) {
   const { classes } = props
   const firstElement = true
   return (
@@ -51,13 +51,14 @@ function TableFamily(props) {
       <Table className={classes.table}>
         <TableHead>
           <TableRow>
-            <CustomTableCell>Nombre</CustomTableCell>
-            <CustomTableCell >Apellido</CustomTableCell>
-            <CustomTableCell >Nacimiento</CustomTableCell>
-            <CustomTableCell >Parentesco</CustomTableCell>
-            <CustomTableCell >Estudia</CustomTableCell>
-            <CustomTableCell >Convivencia</CustomTableCell>
+            <CustomTableCell >Centro </CustomTableCell>
+            <CustomTableCell >Entrada</CustomTableCell>
+            <CustomTableCell >Centros anteriores</CustomTableCell>
+            <CustomTableCell >Terapias/apoyos </CustomTableCell>
+            <CustomTableCell >Apoyos cercanos</CustomTableCell>
+            <CustomTableCell >Entorno</CustomTableCell>
             <CustomTableCell >Observaciones</CustomTableCell>
+            <CustomTableCell >Act</CustomTableCell>
             <CustomTableCell ></CustomTableCell>
           </TableRow>
         </TableHead>
@@ -65,17 +66,19 @@ function TableFamily(props) {
           {data.map(n => {
             return (
               <TableRow className={classes.row} key={n.id}>
-                <CustomTableCell >{n.name}</CustomTableCell>
-                <CustomTableCell >{n.surname}</CustomTableCell>
-                <CustomTableCell >{n.birthday}</CustomTableCell>
-                <CustomTableCell >{n.relation}</CustomTableCell>
-                <CustomTableCell >{n.workStudy}</CustomTableCell>
-                <CustomTableCell >{n.coexistence}</CustomTableCell>
+                <CustomTableCell >{n.currentSchool}</CustomTableCell>
+                <CustomTableCell >{n.startYear}</CustomTableCell>
+                <CustomTableCell >{n.prevSchool}</CustomTableCell>
+                <CustomTableCell >{n.theraphyes}</CustomTableCell>
+                <CustomTableCell >{n.support}</CustomTableCell>
+                <CustomTableCell >{n.enviornment}</CustomTableCell>
                 <CustomTableCell >{n.observations}</CustomTableCell>
+                <CustomTableCell >{n.dateStamp}</CustomTableCell>
                 <CustomTableCell >
-                  <Button className='finalButton' variant="fab" color="secondary" mini>
+                  <Button className='finalButton' variant="fab" color="secondary" mini >
                     <DeleteIcon />
-                  </Button></CustomTableCell>
+                  </Button>
+                </CustomTableCell>
               </TableRow>
             );
           })}
@@ -85,8 +88,8 @@ function TableFamily(props) {
   );
 }
 
-TableFamily.propTypes = {
+TableEducation.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(TableFamily);
+export default withStyles(styles)(TableEducation);
