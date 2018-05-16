@@ -9,16 +9,17 @@ import SheetEdition from './components/SheetEdition'
 import Sheet from './components/Sheet'
 import Visits from './components/Visits'
 import Sheets from './components/Sheets'
+import NoResults from './components/NoResults'
 import AppBar from 'material-ui/AppBar';
-import Toolbar from 'material-ui/Toolbar';
 import BottomNavigation, { BottomNavigationAction } from 'material-ui/BottomNavigation';
 import SheetIcon from '@material-ui/icons/ContentPaste';
 import GroupIcon from '@material-ui/icons/Group';
 import LoginIcon from '@material-ui/icons/AccountCircle';
 import HouseIcon from '@material-ui/icons/Home';
 import VisitsIcon from '@material-ui/icons/Visibility';
+import MoodBad from '@material-ui/icons/MoodBad';
+
 import Grid from 'material-ui/Grid';
-import Typography from 'material-ui/Typography';
 
 
 const users = [
@@ -75,6 +76,9 @@ class App extends Component {
                   <Link to="/login">
                     <BottomNavigationAction label="Login" icon={<LoginIcon />} className='menuNabBarIcon' />
                   </Link>
+                  <Link to="/noresults">
+                    <BottomNavigationAction label="Login" icon={<MoodBad />} className='menuNabBarIcon' />
+                  </Link>
                 </BottomNavigation>
               </Grid>
               <Grid item xs={2} />
@@ -89,6 +93,7 @@ class App extends Component {
           <Route exact path="/sheetEdition" component={() => <SheetEdition data={users} />} />
           <Route exact path="/visits" component={() => <Visits data={users} />} />
           <Route exact path="/sheet" component={() => <Sheet data={users} />} />
+          <Route exact path="/noresults" component={() => <NoResults data={users} />} />
         </div>
       </Router>
     );

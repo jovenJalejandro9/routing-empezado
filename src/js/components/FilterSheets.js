@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
 import ExpansionPanel, {
   ExpansionPanelDetails,
   ExpansionPanelSummary,
@@ -10,38 +8,70 @@ import Typography from 'material-ui/Typography';
 import { FormControlLabel } from 'material-ui/Form';
 import Switch from 'material-ui/Switch';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Chip from 'material-ui/Chip';
 import Button from 'material-ui/Button';
 import Divider from 'material-ui/Divider';
 import TextField from 'material-ui/TextField';
 import Grid from 'material-ui/Grid';
-import MenuItem from 'material-ui/MenuItem';
+import MenuItem from 'material-ui/Menu/MenuItem';
 import { Link } from "react-router-dom";
 
 const FilteUsers = (props) => {
-  const { classes } = props;
   const movility = [
     {
-      value: 'mother',
-      label: 'Madre',
+      label: 'Perfecta',
+      value: 'perfect',
     },
     {
-      value: 'father',
-      label: 'Padre',
+      label: 'Puede hacer pequeñas tareas',
+      value: 'someTasks',
     },
     {
-      value: 'granparent',
-      label: 'Abuelo',
+      label: 'Se puede despzar de un sitio a otro',
+      value: 'displacement',
     },
     {
-      value: 'anotherRelative',
-      label: 'otro familar',
-    },
-    {
-      value: 'other',
-      label: 'Otro',
+      label: 'No puede moverese',
+      value: 'cantMove',
     },
   ];
+  const sponsor = [
+    {
+      label: 'Menos de un año',
+      value: 'oneYear',
+    },
+    {
+      label: 'Entre un año y 4 años',
+      value: 'fourYears',
+    },
+    {
+      label: 'Más de cuatro años',
+      value: 'moreFourYears',
+    },
+    
+  ];
+  const comunication = [
+    {
+      label: 'No habla',
+      value: 'dontSpeak',
+    },
+    {
+      label: 'Habla palabras sueltas',
+      value: 'someWords',
+    },
+    {
+      label: 'Formula frases simples',
+      value: 'simpleSentences',
+    },
+    {
+      label: 'Se le entiende bien',
+      value: 'easyToUnderstand',
+    },
+    {
+      label: 'Habla sin problema',
+      value: 'Prefect',
+    },
+  ];
+  const home = ['Estera', 'Adobe', 'Triplay', 'Ladrillo']
   return (
     <div>
       <ExpansionPanel className='containerFilter' >
@@ -81,28 +111,10 @@ const FilteUsers = (props) => {
               <TextField
                 fullWidth
                 className='eleTextField'
-                id="filterSchoolSheet"
-                label="Escuela"
+                id="filterTestsSheet"
+                label="Pruebas realizadas"
               />
             </Grid>
-            <Grid item xs={3} >
-									<TextField
-										select
-										fullWidth
-										className='eleTextField'
-										id="schoolYearUser"
-										label="Año de entrada"
-										defaultValue='2018'
-										value='Madre'
-									>
-										{movility.map(year => (
-											<MenuItem key={year} value={year}>
-												{year}
-											</MenuItem>
-										))}
-									</TextField>
-								</Grid>
-            
             <Grid item xs={6} >
               <FormControlLabel control={<Switch value="siwichFhysical" />} label="Terapia física" />
             </Grid>
@@ -110,11 +122,97 @@ const FilteUsers = (props) => {
               <FormControlLabel control={<Switch value="swichLanuage" />} label="Terapia de Lenguaje" />
             </Grid>
             <Grid item xs={6} >
-              <FormControlLabel control={<Switch value="swichEnglish" />} label="Habla ingles" />
+              <TextField
+                fullWidth
+                className='eleTextField'
+                id="filterSchoolSheet"
+                label="Escuela"
+              />
             </Grid>
             <Grid item xs={6} >
-              <FormControlLabel control={<Switch value="swichPublic" />} label="Habla en público" />            </Grid>
-            <Grid item xs={2} />
+            </Grid>
+            <Grid item xs={6} >
+              <TextField
+                select
+                fullWidth
+                className='eleTextField'
+                id="filterMovilitySheet"
+                label="Movilidad"
+                value='every'
+              >
+                {movility.map(option => (
+                  <MenuItem key={option.value} value={option.value}>
+                    {option.label}
+                  </MenuItem>
+                ))}
+              </TextField>
+            </Grid>
+            <Grid item xs={6} >
+              <TextField
+                select
+                fullWidth
+                className='eleTextField'
+                id="filterComunicationSheet"
+                label="Comunicación"
+                value='every'
+              >
+                {comunication.map(option => (
+                  <MenuItem key={option.value} value={option.value}>
+                    {option.label}
+                  </MenuItem>
+                ))}
+              </TextField>
+            </Grid>
+            <Grid item xs={6} >
+              <FormControlLabel control={<Switch value="siwichChair" />} label="Silla de ruedas" />
+            </Grid>
+            <Grid item xs={6} />
+            <Grid item xs={6} >
+              <TextField
+                select
+                fullWidth
+                className='eleTextField'
+                id="filterHomeSheet"
+                label="Vivienda"
+                value='every'
+              >
+                {home.map(value => (
+                  <MenuItem key={value} value={value}>
+                    {value}
+                  </MenuItem>
+                ))}
+              </TextField>
+            </Grid>
+            <Grid item xs={6} />
+            <Grid item xs={6} >
+              <FormControlLabel control={<Switch value="owner" />} label="Propiedad" />
+            </Grid>
+            <Grid item xs={6} />
+
+
+            <Grid item xs={6} >
+              <TextField
+                select
+                fullWidth
+                className='eleTextField'
+                id="filterHomeSheet"
+                label="Apadrinamiento"
+                value='every'
+              >
+                {sponsor.map(option => (
+                  <MenuItem key={option.value} value={option.value}>
+                    {option.label}
+                  </MenuItem>
+                ))}
+              </TextField>
+            </Grid>
+            <Grid item xs={6} />
+            <Grid item xs={6} >
+              <FormControlLabel control={<Switch value="eatPlace" />} label="Comedor social" />
+            </Grid>
+            <Grid item xs={6} >
+              <FormControlLabel control={<Switch value="newSheets" />} label="Nueva ficha" />
+            </Grid>
           </Grid>
         </ExpansionPanelDetails>
         <Divider />

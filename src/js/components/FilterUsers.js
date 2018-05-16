@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
 import ExpansionPanel, {
   ExpansionPanelDetails,
   ExpansionPanelSummary,
@@ -10,7 +8,6 @@ import Typography from 'material-ui/Typography';
 import { FormControlLabel } from 'material-ui/Form';
 import Switch from 'material-ui/Switch';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Chip from 'material-ui/Chip';
 import Button from 'material-ui/Button';
 import Divider from 'material-ui/Divider';
 import TextField from 'material-ui/TextField';
@@ -18,7 +15,6 @@ import Grid from 'material-ui/Grid';
 import { Link } from "react-router-dom";
 
 const FilteUsers = (props) => {
-  const { classes } = props;
   return (
     <div>
       <ExpansionPanel className='containerFilter' >

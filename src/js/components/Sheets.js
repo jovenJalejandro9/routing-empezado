@@ -2,21 +2,13 @@ import React from "react"
 import Grid from 'material-ui/Grid';
 import FilterSheets from './FilterSheets'
 import AppBar from 'material-ui/AppBar'
-import { Toolbar } from "material-ui";
 import Typography from 'material-ui/Typography';
 import Tooltip from 'material-ui/Tooltip';
 import Button from 'material-ui/Button';
 import PhoneIcon from '@material-ui/icons/Phone';
 import PlaceIcon from '@material-ui/icons/Place';
-import EmailIcon from '@material-ui/icons/Email';
-import WorkIcon from '@material-ui/icons/Work';
-import VolunteerIcon from '@material-ui/icons/Public';
-import CarIcon from '@material-ui/icons/DirectionsCar';
-import FoodIcon from '@material-ui/icons/Restaurant';
 import MedicalIcon from '@material-ui/icons/LocalHospital';
 import SchoolIcon from '@material-ui/icons/School';
-import EnglishIcon from '@material-ui/icons/RecordVoiceOver';
-import SpeakIcon from '@material-ui/icons/PersonAdd';
 import ImportantIcon from '@material-ui/icons/Error';
 import LocalityIcon from '@material-ui/icons/LocationCity';
 import ZoomIcon from '@material-ui/icons/ZoomIn';

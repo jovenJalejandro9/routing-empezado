@@ -2,7 +2,6 @@ import React from "react"
 import FilterUsers from './FilterUsers'
 import Grid from 'material-ui/Grid';
 import AppBar from 'material-ui/AppBar';
-import { Toolbar } from "material-ui";
 import Typography from 'material-ui/Typography';
 import Tooltip from 'material-ui/Tooltip';
 import Button from 'material-ui/Button';

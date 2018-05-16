@@ -1,29 +1,16 @@
 import React from 'react';
-import TextField from 'material-ui/TextField';
-import Toolbar from 'material-ui/Toolbar';
 import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
-import Switch from 'material-ui/Switch';
-import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
-import Button from 'material-ui/Button';
-import { FormControlLabel } from 'material-ui/Form';
-import { Link } from "react-router-dom";
+import { CardMedia } from 'material-ui/Card';
 import SheetIcon from '@material-ui/icons/ContentPaste';
 import NoSponsorIcon from '@material-ui/icons/MoodBad';
 import SponsorIcon from '@material-ui/icons/Mood';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import List, {
+import {
 	ListItem,
 	ListItemIcon,
 	ListItemText,
 } from 'material-ui/List';
-import ExpansionPanel, {
-	ExpansionPanelSummary,
-	ExpansionPanelDetails,
-} from 'material-ui/ExpansionPanel';
-
 const Home = (props) => {
-
 	return (
 		<div className='container'>
 			<Grid container spacing={24}>
@@ -33,6 +20,15 @@ const Home = (props) => {
 					<Typography className='topElelment' variant='display1' gutterBottom>
 						Home
 				 	</Typography>
+					<Grid container spacing={24}>
+						<Grid className='conatinerMap' item xs={12} >
+							<CardMedia
+								className={'mapHome'}
+								image="https://www.google.com/maps/about/images/mymaps/mymaps-desktop-16x9.png"
+								title="Contemplative Reptile"
+							/>
+						</Grid>
+					</Grid>
 					<Grid container spacing={24}>
 						<Grid item xs={4}>
 							<ListItem className='leftItem'>
@@ -64,16 +60,6 @@ const Home = (props) => {
 								/>
 							</ListItem>
 						</Grid >
-					</Grid>
-
-					<Grid container spacing={24}>
-						<Grid className='conatinerMap' item xs={12} >
-							<CardMedia
-								className={'mapHome'}
-								image="https://www.google.com/maps/about/images/mymaps/mymaps-desktop-16x9.png"
-								title="Contemplative Reptile"
-							/>
-						</Grid>
 					</Grid>
 				</Grid>
 				<Grid item xs={2} />
