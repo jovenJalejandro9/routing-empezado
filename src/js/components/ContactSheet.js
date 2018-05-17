@@ -1,16 +1,9 @@
 import React from 'react';
 import TextField from 'material-ui/TextField';
 import Toolbar from 'material-ui/Toolbar';
-import TableFamily from './TableFamily';
-import AddRelativeDialog from './AddRelativeDialog';
 import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
-import Button from 'material-ui/Button';
 import MenuItem from 'material-ui/Menu/MenuItem';
-import { Link } from "react-router-dom";
-import AddIcon from '@material-ui/icons/Add';
-import ContactSheet from './ContactSheet'
-
 
 class App extends React.Component {
   render() {

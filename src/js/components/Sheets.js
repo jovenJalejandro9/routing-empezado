@@ -30,7 +30,6 @@ class Sheets extends React.Component {
 		const userNode = users.map((user) => {
 			return (
 				<div key={user.id} className='container'>
-
 					<Grid container spacing={24}>
 						<Grid item xs={2} />
 						<Grid item xs={8} >

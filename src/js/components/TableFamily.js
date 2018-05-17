@@ -4,13 +4,6 @@ import { withStyles } from 'material-ui/styles';
 import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
 import Paper from 'material-ui/Paper';
 import DeleteIcon from '@material-ui/icons/Delete';
-import ExpansionPanel, {
-  ExpansionPanelDetails,
-  ExpansionPanelSummary,
-  ExpansionPanelActions,
-} from 'material-ui/ExpansionPanel';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 
 
@@ -45,7 +38,6 @@ const data = [
 
 function TableFamily(props) {
   const { classes } = props
-  const firstElement = true
   return (
     <Paper className={classes.root}>
       <Table className={classes.table}>
@@ -61,7 +53,7 @@ function TableFamily(props) {
             <CustomTableCell ></CustomTableCell>
           </TableRow>
         </TableHead>
-        <TableBody className = 'bodyTable' >
+        <TableBody >
           {data.map(n => {
             return (
               <TableRow className={classes.row} key={n.id}>
@@ -75,7 +67,8 @@ function TableFamily(props) {
                 <CustomTableCell >
                   <Button className='finalButton' variant="fab" color="secondary" mini>
                     <DeleteIcon />
-                  </Button></CustomTableCell>
+                  </Button>
+                </CustomTableCell>
               </TableRow>
             );
           })}
