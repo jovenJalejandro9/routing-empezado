@@ -2,9 +2,6 @@ import React from 'react';
 import TableFamily from './TableFamily';
 import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
-import Button from 'material-ui/Button';
-import AddIcon from '@material-ui/icons/Add';
-import FamilynAddRow from './FamilyAddRow'
 import AddButton from './AddButton'
 import FamilyAddRow from './FamilyAddRow'
 

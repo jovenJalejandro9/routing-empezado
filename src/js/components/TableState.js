@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
 import Paper from 'material-ui/Paper';
-import DeleteIcon from '@material-ui/icons/Delete';
-import Button from 'material-ui/Button';
 import DeleteButton from './DeleteButton'
 
 const CustomTableCell = withStyles(theme => ({
@@ -32,8 +30,8 @@ const styles = theme => ({
 // ]
 
 function TableState(props) {
-  const header = props.headTabEducation
-  const data = props.bodyTabEducation
+  const header = props.headTab
+  const data = props.bodyTab
   const { classes } = props
   const headerTable = header.map((ele) => {
     return (

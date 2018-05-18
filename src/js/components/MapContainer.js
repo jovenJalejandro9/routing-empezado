@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import GoogleMapReact from 'google-map-react';
+import GoogleMapReact from 'google-map-react'; 
 import MapColum from './MapColum'
-import Grid from 'material-ui/Grid';
 
 
-class SimpleMap extends Component {
+class MapContainer extends Component {
   static defaultProps = {
     center: {
       lat: -6.7743969,
@@ -22,19 +21,11 @@ class SimpleMap extends Component {
           defaultCenter={this.props.center}
           defaultZoom={14}
         >
-          <Grid container spacing={24}>
-            <Grid item xs={2} />
-            <Grid item xs={8} >
-            </Grid>
-            <Grid  item xs={2}>
               <MapColum className='mapColum' />
-            </Grid>            
-          </Grid>
-
         </GoogleMapReact>
       </div>
     );
   }
 }
 
-export default SimpleMap;
+export default MapContainer;

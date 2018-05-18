@@ -1,11 +1,10 @@
 import React from 'react';
-import Map from './Map'
+import MapContainer from './MapContainer'
 
 const Home = (props) => {
 	return (
 		<div className='container'>
-			<Map>
-			</Map>
+			<MapContainer/>
 		</div>
 	)
 }

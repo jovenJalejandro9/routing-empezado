@@ -9,6 +9,8 @@ import ContactSheet from './ContactSheet'
 import FamilySheet from './FamilySheet'
 import EducationSheet from './EducationSheet'
 import SocialSheet from './SocialSheet'
+import MedicalSheet from './MedicalSheet'
+import HouseSheet from './HouseSheet';
 
 class Sheet extends React.Component {
 	render() {
@@ -29,154 +31,13 @@ class Sheet extends React.Component {
 					<EducationSheet />
 					{/* Social Situation */}
 					<SocialSheet/>
-						{/* medical information */}
-						<Grid container spacing={24}>
-						<Grid item xs={2} />
-						<Grid item xs={8} >
-							<Typography className='topElelment' variant='display1' gutterBottom>
-								Datos medicos
-				 		</Typography>
-							<Grid container spacing={24}>
-								<Grid item xs={3} >
-									<TextField
-										fullWidth
-										className='eleTextField'
-										id="currentCenterUser"
-										label="Centro Actual"
-										defaultValue="AFAPED"
-									/>
-								</Grid>
-								<Grid item xs={3} >
-									<TextField
-										select
-										fullWidth
-										className='eleTextField'
-										id="schoolYearUser"
-										label="Año de entrada"
-										defaultValue='2018'
-										value='Madre'
-									>
-										{pastYears.map(year => (
-											<MenuItem key={year} value={year}>
-												{year}
-											</MenuItem>
-										))}
-									</TextField>
-								</Grid>
-								<Grid item xs={3} >
-									<TextField
-										fullWidth
-										className='eleTextField'
-										id="previousCenterUser"
-										label="Centros anteriores"
-										defaultValue="Angel Mary"
-									/>
-								</Grid>
-								<Grid item xs={3} >
-									<TextField
-										fullWidth
-										className='eleTextField'
-										id="Therapies"
-										label="Apoyos especiales/terapias"
-										defaultValue="Terapia fisica, terapia de lenguaje"
-									/>
-								</Grid>
-								<Grid item xs={3} >
-									<TextField
-										fullWidth
-										className='eleTextField'
-										id="helpUser"
-										label="Apoyos cercanos"
-										defaultValue="Tios"
-									/>
-								</Grid>
-								<Grid item xs={3} >
-									<TextField
-										multiline
-										fullWidth
-										className='eleTextField'
-										id="enviornmentUser"
-										label="Relaciones con el entorno"
-										defaultValue="Sale a la calle"
-									/>
-								</Grid>
-							</Grid>
-						</Grid>
-						<Grid item xs={2} />
+					{/* medical information */}
+					<MedicalSheet/>
 						{/* House information */}
-						<Grid item xs={2} />
-						<Grid item xs={8} >
-							<Typography className='topElelment' variant='display1' gutterBottom>
-								Datos de la vivienda
-				 		</Typography>
-							<Grid container spacing={24}>
-								<Grid item xs={3} >
-									<TextField
-										fullWidth
-										className='eleTextField'
-										id="currentCenterUser"
-										label="Centro Actual"
-										defaultValue="AFAPED"
-									/>
-								</Grid>
-								<Grid item xs={3} >
-									<TextField
-										select
-										fullWidth
-										className='eleTextField'
-										id="schoolYearUser"
-										label="Año de entrada"
-										defaultValue='2018'
-										value='Madre'
-									>
-										{pastYears.map(year => (
-											<MenuItem key={year} value={year}>
-												{year}
-											</MenuItem>
-										))}
-									</TextField>
-								</Grid>
-								<Grid item xs={3} >
-									<TextField
-										fullWidth
-										className='eleTextField'
-										id="previousCenterUser"
-										label="Centros anteriores"
-										defaultValue="Angel Mary"
-									/>
-								</Grid>
-								<Grid item xs={3} >
-									<TextField
-										fullWidth
-										className='eleTextField'
-										id="Therapies"
-										label="Apoyos especiales/terapias"
-										defaultValue="Terapia fisica, terapia de lenguaje"
-									/>
-								</Grid>
-								<Grid item xs={3} >
-									<TextField
-										fullWidth
-										className='eleTextField'
-										id="helpUser"
-										label="Apoyos cercanos"
-										defaultValue="Tios"
-									/>
-								</Grid>
-								<Grid item xs={3} >
-									<TextField
-										multiline
-										fullWidth
-										className='eleTextField'
-										id="enviornmentUser"
-										label="Relaciones con el entorno"
-										defaultValue="Sale a la calle"
-									/>
-								</Grid>
-							</Grid>
-						</Grid>
-						<Grid item xs={2} />
+					<HouseSheet />
+						
 						{/* economical information */}
+						<Grid container spacing={24}>
 						<Grid item xs={2} />
 						<Grid item xs={8} >
 							<Typography className='topElelment' variant='display1' gutterBottom>

@@ -23,7 +23,6 @@ class DeleteButton extends React.Component {
   };
 
   render() {
-    const form = this.props.form
     
     return (
       <div>

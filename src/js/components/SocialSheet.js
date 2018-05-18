@@ -8,11 +8,11 @@ import SocialForm from './SocialForm'
 
 class SocialSheet extends React.Component {
   render() {
-    const dataStateEducation = [
-    { timeStamp: '20/10/2018', cares: 'Madre', closeSuppoort: 'Tios', enviornment: 'Sale a la calle a jugar con sus amigos'},
+    const dataStateSocial = [
+    { timeStamp: '20/10/2018',freeTime:'Juega al fútbol con los vecinos', cares: 'Madre', closeSuppoort: 'Tios', enviornment: 'Buena relación con toodos los vecinos'},
      
     ]
-    const headStateEducation = ['Tiempo Libre', 'Cuidadores', 'Apoyos cercanos', 'Relaciones con el entorno',' ']
+    const headStateSocial = ['Fecha', 'Tiempo Libre', 'Cuidadores', 'Apoyos cercanos', 'Relaciones con el entorno',' ']
     return (
       <div>
         <Grid container spacing={24}>
@@ -21,7 +21,7 @@ class SocialSheet extends React.Component {
             <Typography className='topElelment' variant='display1' gutterBottom>
               Situación social
 				 	  </Typography>
-            <TableState headTabEducation={headStateEducation} bodyTabEducation = {dataStateEducation}/>
+            <TableState headTab={headStateSocial} bodyTab = {dataStateSocial}/>
             <AddButton form={<SocialForm />} />
           </Grid>
           <Grid item xs={2} />

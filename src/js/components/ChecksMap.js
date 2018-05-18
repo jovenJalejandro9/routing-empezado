@@ -1,5 +1,4 @@
 import React from 'react';
-import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -8,9 +7,9 @@ import Switch from '@material-ui/core/Switch';
 
 class SwitchesGroup extends React.Component {
   state = {
-    gilad: true,
-    jason: false,
-    antoine: true,
+    sponsored: true,
+    noSponsored: false,
+    nextVisits: true,
   };
 
   handleChange = name => event => {
@@ -24,32 +23,32 @@ class SwitchesGroup extends React.Component {
           <FormControlLabel
             control={
               <Switch
-                checked={this.state.gilad}
-                onChange={this.handleChange('gilad')}
-                value="gilad"
+                checked={this.state.sponsored}
+                onChange={this.handleChange('sponsored')}
+                value="sponsored"
               />
             }
-            label="Gilad Gray"
+            label="Apadrinados(77)"
           />
           <FormControlLabel
             control={
               <Switch
-                checked={this.state.jason}
-                onChange={this.handleChange('jason')}
-                value="jason"
+                checked={this.state.noSponsored}
+                onChange={this.handleChange('noSponsored')}
+                value="noSponsored"
               />
             }
-            label="Jason Killian"
+            label="Lista de espera (10)"
           />
           <FormControlLabel
             control={
               <Switch
-                checked={this.state.antoine}
-                onChange={this.handleChange('antoine')}
-                value="antoine"
+                checked={this.state.nextVisits}
+                onChange={this.handleChange('nextVisits')}
+                value="nextVisits"
               />
             }
-            label="Antoine Llorca"
+            label="Próximas visitas"
           />
         </FormGroup>
         <FormHelperText>Filtra con cariño</FormHelperText>

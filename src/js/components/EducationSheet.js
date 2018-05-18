@@ -21,7 +21,7 @@ class EducationSheet extends React.Component {
             <Typography className='topElelment' variant='display1' gutterBottom>
               Educación/Formación
 				 	  </Typography>
-            <TableState headTabEducation={headStateEducation} bodyTabEducation = {dataStateEducation}/>
+            <TableState headTab={headStateEducation} bodyTab = {dataStateEducation}/>
             <AddButton form={<EducationForm />} />
           </Grid>
           <Grid item xs={2} />

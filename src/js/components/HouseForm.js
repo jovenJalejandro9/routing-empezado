@@ -2,13 +2,82 @@ import React from 'react';
 import TextField from 'material-ui/TextField';
 import Grid from 'material-ui/Grid';
 import MenuItem from 'material-ui/Menu/MenuItem';
+import { FormControlLabel } from 'material-ui/Form';
+import Switch from 'material-ui/Switch';
 
-class EducationForm extends React.Component {
+class HouseForm extends React.Component {
   render() {
     const pastYears = [2018, 2017, 2019, 2020]
+    const property = [
+      {
+        label: 'Propiedad',
+        value: 'owner',
+      },
+      {
+        label: 'Alquiler',
+        value: 'rent',
+      }
+    ];
+    const material = [
+      {
+        label: 'Ladrillo',
+        value: 'bricks',
+      },
+      {
+        label: 'Adobe',
+        value: 'adobe',
+      },
+      {
+        label: 'Triplay',
+        value: 'triplay',
+      },
+      {
+        label: 'Esteras',
+        value: 'esteras',
+      }
+    ];
     return (
       <Grid container spacing={24}>
         <Grid item xs={3} >
+          <TextField
+            select
+            fullWidth
+            className='eleTextField'
+            id="propertyHouse"
+            label="Prpiedad/Alquiler"
+            defaultValue='Propiedad'
+            value='owner'
+          >
+            {property.map(option => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </TextField>
+        </Grid>
+        <Grid item xs={3} >
+          <TextField
+            select
+            fullWidth
+            className='eleTextField'
+            id="materialHouse"
+            label="Masterial"
+            defaultValue='Ladrillo'
+            value='bricks'
+          >
+            {material.map(option => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </TextField>
+        </Grid>
+        <Grid item xs={9}/>
+        <Grid item xs={3} >
+          <FormControlLabel control={<Switch value="siwichDriver" />} label="Conduce" />
+        </Grid>
+        <Grid item xs={3} >
+
           <TextField
             fullWidth
             className='eleTextField'
@@ -75,4 +144,4 @@ class EducationForm extends React.Component {
     )
   }
 }
-export default EducationForm
+export default HouseForm

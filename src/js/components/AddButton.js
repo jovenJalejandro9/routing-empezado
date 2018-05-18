@@ -35,7 +35,7 @@ class AddButton extends React.Component {
           open={this.state.open}
           onClose={this.handleClose}
         >
-          <DialogTitle id="responsive-dialog-title">{"Añadir fila educación"}</DialogTitle>
+          <DialogTitle id="responsive-dialog-title">{"Añadir dato"}</DialogTitle>
           <DialogContent >
             <DialogContentText >
               {form}
